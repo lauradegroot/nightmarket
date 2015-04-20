@@ -1,0 +1,248 @@
+@charset "utf-8";
+
+body {
+  font-family: 'Karla', sans-serif;
+}
+
+.top-nav{
+  position: fixed;
+  width: 100%;
+  height:100px;
+  padding-top: 15px;
+  background:url("../images/gradient.png") repeat-x;
+  ul {
+    float:left;
+    padding-left:20px;
+    li {
+      float:left;
+      font-size: 16px;
+      color:#fff;
+      &:first-of-type { list-style-type:none; }
+      &:not(:first-of-type) { 
+        margin-left:30px;
+      }
+    }
+  }
+  .buy-tickets {
+    float:right;
+    p {
+      color:#999999;
+      margin-right: 15px;
+      font-size: 16px;
+      a {
+        color:#fff;
+        text-decoration: none;
+        border: 1px solid #fff;
+        padding:10px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+.left-nav{
+  position: absolute;
+  width: 170px;
+  top: 1800px;
+  left: 100px;
+  color: #fff;
+  li {
+    list-style-type: none;
+    line-height: 25px;
+  }
+}
+.wrap {
+  width: 100%;
+}
+.image-text {
+  display: block;
+  font-size: 1px;
+  text-indent: -20000px;
+  background-size: 100%;
+}
+
+.left, .right {float:left;}
+
+a { 
+  text-decoration: none;
+  color:#000;
+  &:hover { text-decoration: underline;}
+}
+
+.parallax-window {
+  min-height: 400px;
+  background: transparent;
+  &.white { 
+    background: #FFFFFF; 
+    overflow: hidden;
+  }
+}
+
+.content {
+  min-height: 400px;
+  width:100%;
+  &.green { background: #BFE352; }
+  &.greener { background: #A1DE42; }
+  &.greenest { background: #89D141; }
+}
+.hero {
+  min-height:465px;
+  width: 100%;
+  .hero-content {
+    padding-top:100px;
+    h1 { 
+      height:279px;
+      width:267px;
+      margin: 0 auto;
+      background: url("../images/logo.png") no-repeat;
+    }
+    .the-stop {
+      color:#fff;
+      font-size: 14px;
+      float:right;
+      line-height: 90px;
+      height:60px;
+      span {
+        height:60px;
+        width:101px;
+        background: url("../images/stop_logo.png") no-repeat;
+        margin: 0 20px 0 5px;
+        display: inline-block;
+        background-size: 100%;
+      }
+    }
+  }
+}
+.bigger-than-ever {
+  height: 440px;
+  .bigger {
+    background: url("../images/bigger.png") no-repeat;
+    height: 51px;
+    width: 448px;
+    margin:60px auto 30px auto;
+  }
+  .bigger-text {
+    margin: 0 auto;
+    width:419px;
+    line-height: 23px;
+  }
+  .more {
+    background: url("../images/more.png") no-repeat;
+    height: 105px;
+    width: 359px;
+    margin: 0 auto;
+  }
+  .left {
+    text-align: right;
+    color: #89D141;
+    margin: 15px 37px 0 18px
+  }
+  .right {
+    text-align: left;
+    color: #A1DE42;
+  }
+}
+.about {
+  width:600px;
+  margin:0 auto;
+  color: #242923;
+  padding-top:50px;
+  height: 367px;
+  .about-the-stop{
+    background: url("../images/about.png") no-repeat;
+    width:307px;
+    height:21px;
+  }
+  p {line-height: 22px;}
+}
+
+.lineup {
+  .lineup_category {
+    min-width: 800px; 
+    width: 70%;
+    padding: 50px 0 0 320px;
+    clear: both;
+    &:first-of-type { padding-top: 75px; }
+    &:last-of-type { padding-bottom: 75px; }
+  }
+  .category {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  ul { 
+    display: inline;
+    overflow: hidden;
+  }
+  li {
+    list-style-type: none;
+    float:left;
+    width:200px;
+    padding-right: 30px;
+    color:#000;
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .sponsors{
+    overflow: hidden;
+    img { width:200px; }
+  } 
+  .committee {
+    overflow: hidden;
+    ul {
+      display: block;
+      padding-left:0;
+    }
+    li {
+      cursor: pointer;
+      span {
+        padding:4px;
+      }
+      &:hover{
+        span{
+          background:#000;
+          color: #fff
+        }
+      }
+    }
+    .member_info{
+      display: none;
+      padding-top:30px;
+      .member_image {
+        clear:both;
+        float:left;
+        img{ width: 110px; }
+      }
+      .member_bio{
+        float:left;
+        width: 400px;
+        margin-left:20px;
+        span { font-weight: bold; }
+      }
+      &.lianne { display: block; }
+    }
+  }
+}
+.faq {
+  overflow: auto;
+  padding: 75px 0;
+  .faq_image {
+    background: url("../images/faq.png") no-repeat;
+    height: 25px;
+    width: 279px;
+  }
+  a { text-decoration: underline; }
+  .questions {
+    width: 800px;
+    margin: 0 auto;
+    .left {margin-right: 75px;}
+    .question, .answer {
+      width: 360px;
+    }
+    .question {
+      font-weight: bold;
+    }
+    .answer {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
