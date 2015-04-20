@@ -2,15 +2,15 @@
 
 body {
   font-family: 'Karla', sans-serif;
+  overflow-x: hidden;
 }
-
-.top-nav{
+.top-nav {
   position: fixed;
   width: 100%;
   height:100px;
   padding-top: 15px;
   background:url("../images/gradient.png") repeat-x;
-  ul {
+  .nav-links {
     float:left;
     padding-left:20px;
     li {
@@ -18,9 +18,7 @@ body {
       font-size: 16px;
       color:#fff;
       &:first-of-type { list-style-type:none; }
-      &:not(:first-of-type) { 
-        margin-left:30px;
-      }
+      &:not(:first-of-type) { margin-left:30px; }
     }
   }
   .buy-tickets {
@@ -38,16 +36,43 @@ body {
       }
     }
   }
+  &.white-nav{
+    background: #fff;
+    background-image:none;
+    height: 54px;
+    padding-top: 3px;
+    .nav-links {
+      background: url("../images/nightmarket.png") no-repeat;
+      background-position: 20px 18px;
+      padding-left:200px;
+    }
+    .buy-tickets {
+      margin-left:-200px;
+      p {
+        color:#30C57D;
+        a {
+          color:#fff;
+          background: #30C57D;
+        }
+      }
+    }
+  }
 }
 .left-nav{
   position: absolute;
   width: 170px;
   top: 1800px;
-  left: 100px;
+  left: 50px;
   color: #fff;
   li {
     list-style-type: none;
     line-height: 25px;
+    width: 175px;
+    &.active {
+      color:#000;
+      background: url("../images/arrow.png") no-repeat;
+      background-position: right 7px;
+    }
   }
 }
 .wrap {
@@ -142,17 +167,19 @@ a {
   }
 }
 .about {
-  width:600px;
-  margin:0 auto;
-  color: #242923;
-  padding-top:50px;
-  height: 367px;
-  .about-the-stop{
-    background: url("../images/about.png") no-repeat;
-    width:307px;
-    height:21px;
+  .inner {
+    width:600px;
+    margin:0 auto;
+    color: #242923;
+    padding-top:50px;
+    height: 367px;
+    .about-the-stop{
+      background: url("../images/about.png") no-repeat;
+      width:307px;
+      height:21px;
+    }
+    p {line-height: 22px;}
   }
-  p {line-height: 22px;}
 }
 
 .lineup {
@@ -181,9 +208,21 @@ a {
     font-size: 14px;
     line-height: 21px;
   }
+  .designers {
+    li {
+      height: 130px;
+      width: 200px;
+      a { font-weight: bold; }
+      p {
+        margin:0;
+        font-size: 13px;
+      }
+    }
+  }
   .sponsors{
     overflow: hidden;
     img { width:200px; }
+    a { padding-right: 30px; }
   } 
   .committee {
     overflow: hidden;
@@ -193,9 +232,7 @@ a {
     }
     li {
       cursor: pointer;
-      span {
-        padding:4px;
-      }
+      span { padding:4px; }
       &:hover{
         span{
           background:#000;
@@ -234,19 +271,15 @@ a {
     width: 800px;
     margin: 0 auto;
     .left {margin-right: 75px;}
-    .question, .answer {
-      width: 360px;
-    }
-    .question {
-      font-weight: bold;
-    }
+    .question, .answer { width: 360px; }
+    .question { font-weight: bold; }
     .answer {
       font-size: 14px;
       line-height: 20px;
     }
   }
 }
-.content.location {
+.content.details {
   min-height:266px;
   height:266px;
   background: url("../images/location.png") no-repeat;
