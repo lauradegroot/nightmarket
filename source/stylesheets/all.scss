@@ -10,6 +10,7 @@ body {
   height:100px;
   padding-top: 3px;
   background:url("../images/gradient.png") repeat-x;
+  z-index: 1;
   a { 
     color:#fff; 
     &:hover { text-decoration: none;}
@@ -74,17 +75,16 @@ body {
   width: 170px;
   top: 1800px;
   left: 50px;
+  color: #fff;
   li {
     list-style-type: none;
     line-height: 25px;
     width: 175px;
-    a {
-      color: #fff;
-      &.active {
-        color:#000;
-        background: url("../images/arrow.png") no-repeat;
-        background-position: right 7px;
-      }
+    a {color:#fff;}
+    &.active {
+      a {color:#000;}
+      background: url("../images/arrow.png") no-repeat;
+      background-position: right 7px;
     }
   }
 }
@@ -201,11 +201,18 @@ a {
 }
 
 .lineup {
+  .the-lineup {
+    background: url("../images/lineup.png") no-repeat;
+    background-size: 100%;
+    height: 25px;
+    width: 105px;
+  }
   .lineup_category {
     min-width: 800px; 
     width: 70%;
     padding: 50px 0 0 320px;
     clear: both;
+    overflow: hidden;
     &:first-of-type { padding-top: 75px; }
     &:last-of-type { padding-bottom: 75px; }
   }
@@ -226,7 +233,7 @@ a {
     font-size: 14px;
     line-height: 21px;
   }
-  .designers {
+  .designers-section {
     li {
       height: 130px;
       width: 200px;
@@ -237,12 +244,14 @@ a {
       }
     }
   }
-  .sponsors{
+  .sponsors-section{
     overflow: hidden;
-    img { width:200px; }
-    a { padding-right: 30px; }
+    img { 
+      width:200px; 
+      padding-right: 30px;
+    }
   } 
-  .committee {
+  .committee-section {
     overflow: hidden;
     ul {
       display: block;
