@@ -9,7 +9,13 @@ $ ->
   $(window).scroll ->
     if ($('body').scrollTop() > left_nav_offset) and ($('body').scrollTop() < 4800)
       $('.left-nav').css({ "position": "fixed", "top": "100px" })
-    else if $('body').scrollTop() > 4800
-      $('.left-nav').css({ "position": "absolute", "top": "4900px"})
+    # else if $('body').scrollTop() > 4800
+    #   $('.left-nav').css({ "position": "absolute", "top": "4900px"})
     else 
       $('.left-nav').css({ "position": "absolute", "top": "1800px" })
+
+    if $('body').scrollTop() > 445
+      $('.top-nav').addClass('white-nav')
+    else
+      $('.top-nav').removeClass('white-nav')
+      

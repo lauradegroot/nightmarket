@@ -8,11 +8,14 @@ body {
   position: fixed;
   width: 100%;
   height:100px;
-  padding-top: 15px;
+  padding-top: 3px;
   background:url("../images/gradient.png") repeat-x;
+  a { 
+    color:#fff; 
+    &:hover { text-decoration: none;}
+  }
   .nav-links {
     float:left;
-    padding-left:20px;
     li {
       float:left;
       font-size: 16px;
@@ -28,7 +31,6 @@ body {
       margin-right: 15px;
       font-size: 16px;
       a {
-        color:#fff;
         text-decoration: none;
         border: 1px solid #fff;
         padding:10px;
@@ -40,14 +42,23 @@ body {
     background: #fff;
     background-image:none;
     height: 54px;
-    padding-top: 3px;
+    min-width: 1000px;
+    a { 
+      color:#000; 
+      &.active {
+        color:#30C57D;
+        border-bottom: 1px solid #30C57D;
+        padding-bottom: 2px;
+      }
+
+    }
     .nav-links {
       background: url("../images/nightmarket.png") no-repeat;
       background-position: 20px 18px;
-      padding-left:200px;
+      padding-left: 220px;
+      background-size: 35%;
     }
     .buy-tickets {
-      margin-left:-200px;
       p {
         color:#30C57D;
         a {
@@ -63,15 +74,17 @@ body {
   width: 170px;
   top: 1800px;
   left: 50px;
-  color: #fff;
   li {
     list-style-type: none;
     line-height: 25px;
     width: 175px;
-    &.active {
-      color:#000;
-      background: url("../images/arrow.png") no-repeat;
-      background-position: right 7px;
+    a {
+      color: #fff;
+      &.active {
+        color:#000;
+        background: url("../images/arrow.png") no-repeat;
+        background-position: right 7px;
+      }
     }
   }
 }
@@ -141,17 +154,20 @@ a {
   height: 440px;
   .bigger {
     background: url("../images/bigger.png") no-repeat;
+    background-size: 100%;
     height: 51px;
     width: 448px;
     margin:60px auto 30px auto;
   }
   .bigger-text {
     margin: 0 auto;
-    width:419px;
+    width: 464px;
     line-height: 23px;
+    font-size: 18px;
   }
   .more {
     background: url("../images/more.png") no-repeat;
+    background-size: 100%;
     height: 105px;
     width: 359px;
     margin: 0 auto;
@@ -167,6 +183,7 @@ a {
   }
 }
 .about {
+  padding: 30px 0;
   .inner {
     width:600px;
     margin:0 auto;
@@ -175,6 +192,7 @@ a {
     height: 367px;
     .about-the-stop{
       background: url("../images/about.png") no-repeat;
+      background-size: 100%;
       width:307px;
       height:21px;
     }
@@ -263,6 +281,7 @@ a {
   padding: 75px 0;
   .faq_image {
     background: url("../images/faq.png") no-repeat;
+    background-size: 100%;
     height: 25px;
     width: 279px;
   }
@@ -280,8 +299,33 @@ a {
   }
 }
 .content.details {
+  overflow: hidden;
   min-height:266px;
   height:266px;
   background: url("../images/location.png") no-repeat;
   background-position: top right;
+  .info {
+    width:600px;
+    margin:50px auto 0 auto;
+    p {
+      line-height: 12px;
+      span {
+        color:#AFAEAE;
+        display: inline-block;
+        width:100px;
+      }
+      &.tickets{
+        background: #8FD647 url("../images/tickets.png") no-repeat;
+        background-size: 200px;
+        width: 250px;
+        padding: 22px;
+        background-position: center center;
+        margin:30px 0;
+      }
+      &.stop-id {
+        font-size: 13px;
+        color:#A5A6A6;
+      }
+    }
+  }
 }
