@@ -1,5 +1,5 @@
 $ ->
-  $('.committee li').click ->
+  $('.committee-section li').click ->
     member_name = $(this).attr('class')
     console.log member_name 
     $('.member_info').hide()
@@ -7,13 +7,15 @@ $ ->
 
   left_nav_offset = $('.left-nav').offset().top - 100
   committee_offset = $('.committee-section').offset().top - 100
+
   $(window).scroll ->
-    if ($('body').scrollTop() > left_nav_offset) and ($('body').scrollTop() < committee_offset)
+    if ($(window).scrollTop() > left_nav_offset) and ($(window).scrollTop() < committee_offset)
       $('.left-nav').css({ "position": "fixed", "top": "100px" })
-    else if $('body').scrollTop() > committee_offset
+    else if $(window).scrollTop() > committee_offset
       $('.left-nav').css({ "position": "absolute", "top": (committee_offset + 100)+"px"})
     else 
       $('.left-nav').css({ "position": "absolute", "top": "1800px" })
+    
     if $('body').scrollTop() > 445
       $('.top-nav').addClass('white-nav')
     else

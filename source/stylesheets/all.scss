@@ -11,6 +11,7 @@ body {
   padding-top: 3px;
   background:url("../images/gradient.png") repeat-x;
   z-index: 1;
+  min-width: 750px;
   a { 
     color:#fff; 
     &:hover { text-decoration: none;}
@@ -183,7 +184,7 @@ a {
   }
 }
 .about {
-  padding: 30px 0;
+  padding: 30px 10px;
   .inner {
     width:600px;
     margin:0 auto;
@@ -286,8 +287,8 @@ a {
   }
 }
 .faq {
-  overflow: auto;
-  padding: 75px 0;
+  overflow-x: hidden;
+  padding: 75px 10px;
   .faq_image {
     background: url("../images/faq.png") no-repeat;
     background-size: 100%;
@@ -313,6 +314,7 @@ a {
   height:266px;
   background: url("../images/location.png") no-repeat;
   background-position: top right;
+  padding: 0 10px;
   .info {
     width:600px;
     margin:50px auto 0 auto;
