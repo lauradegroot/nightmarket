@@ -16,7 +16,7 @@ $ ->
     else 
       $('.left-nav').css({ "position": "absolute", "top": "1800px" })
     
-    if $('body').scrollTop() > 445
+    if $('body').scrollTop() > 50
       $('.top-nav').addClass('white-nav')
     else
       $('.top-nav').removeClass('white-nav')

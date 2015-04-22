@@ -11,18 +11,31 @@ body {
   padding-top: 3px;
   background:url("../images/gradient.png") repeat-x;
   z-index: 1;
-  min-width: 750px;
+  min-width: 850px;
   a { 
     color:#fff; 
     &:hover { text-decoration: none;}
   }
+  .event {
+    background: url("../images/nightmarket.png") no-repeat;
+    width:210px;
+    height:25px;
+    background-size: 100%;
+    display: none;
+    margin-left:-20px;
+    list-style-type: none;
+  }
+  .about { margin-left: -50px;}
   .nav-links {
     float:left;
     li {
       float:left;
       font-size: 16px;
       color:#fff;
-      &:first-of-type { list-style-type:none; }
+      &:nth-of-type(2) { 
+        list-style-type:none; 
+        a {margin-left:-50px;}
+      }
       &:not(:first-of-type) { margin-left:30px; }
     }
   }
@@ -41,10 +54,13 @@ body {
     }
   }
   &.white-nav{
-    background: #fff;
-    background-image:none;
-    height: 54px;
-    min-width: 1000px;
+    background: url("../images/header.png")repeat-x;
+    height: 60px;
+    min-width: 1050px;
+    .event {display: block;}
+    .nav-links {
+      li:nth-of-type(2) a { margin-left:0px; }
+    }
     a { 
       color:#000; 
       &.active {
@@ -53,12 +69,6 @@ body {
         padding-bottom: 2px;
       }
 
-    }
-    .nav-links {
-      background: url("../images/nightmarket.png") no-repeat;
-      background-position: 20px 18px;
-      padding-left: 220px;
-      background-size: 35%;
     }
     .buy-tickets {
       p {
@@ -278,7 +288,8 @@ a {
       }
       .member_bio{
         float:left;
-        max-width: 650px;
+        max-width: 470px; 
+        line-height: 22px;
         margin-left:20px;
         span { font-weight: bold; }
       }
