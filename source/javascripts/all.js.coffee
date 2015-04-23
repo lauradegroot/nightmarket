@@ -21,11 +21,11 @@ $ ->
     else
       $('.top-nav').removeClass('white-nav')
 
-  continuousElements = document.getElementsByClassName('lineup_category')
+  lineupCategory = document.getElementsByClassName('lineup_category')
   i = 0
-  while i < continuousElements.length
+  while i < lineupCategory.length
     new Waypoint(
-      element: continuousElements[i]
+      element: lineupCategory[i]
       handler: ->
         menu_item = $(this)[0].element.id
         $(".left-nav li").removeClass("active")

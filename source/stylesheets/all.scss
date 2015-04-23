@@ -3,6 +3,7 @@
 body {
   font-family: 'Karla', sans-serif;
   overflow-x: hidden;
+  min-width: 600px;
 }
 .top-nav {
   position: fixed;
@@ -153,16 +154,27 @@ a {
       color:#fff;
       font-size: 14px;
       float:right;
-      line-height: 90px;
+      line-height: 119px;
       height:60px;
+      margin-top:-10px;
       span {
-        height:60px;
-        width:101px;
+        height: 74px;
+        width: 128px;
         background: url("../images/stop_logo.png") no-repeat;
         margin: 0 20px 0 5px;
         display: inline-block;
         background-size: 100%;
       }
+    }
+    .tickets-date {
+      float: left;
+      margin: 33px 0 0 35px;
+      font-size: 28px;
+      a {
+        color:#fff;
+        text-decoration: none;
+      }
+      
     }
   }
 }
@@ -274,8 +286,13 @@ a {
       width: 110px;
       &.now {width: 75px;}
     }
+    .garcon span { font-size: 15px; }
   } 
+  .tickets-section {
+    a {text-decoration: underline;}
+  }
   .committee-section {
+    min-height: 470px;
     overflow: hidden;
     ul {
       display: block;
